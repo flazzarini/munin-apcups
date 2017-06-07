@@ -3,7 +3,7 @@
 APCACCESS='/sbin/apcaccess'
 
 function GetValue {
-    localoutput=`$APCACCESS | grep ITEMP | sed 's/.*: \(.*\)$/\1/' | tr -d ' ' | cut -d. -f1`
+    localoutput=`$APCACCESS | grep ITEMP | sed 's/.*: \(.*\) C$/\1/' | tr -d ' '`
     echo $localoutput
 }
 
